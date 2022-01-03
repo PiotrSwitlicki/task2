@@ -13,7 +13,7 @@ class EventController extends Controller
 	    $events=Event::with('user')->get();
 	    $events=$events->toJson();
 
-	    return view('events', ['events' => $events]);
+	    return response($events);
 	    
 	}
 
