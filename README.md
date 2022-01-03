@@ -1,4 +1,4 @@
-<img src="task.jpg" alt="faktury" width="800" height="800">
+<img src="task.jpg" alt="faktury">
 
 ZADANIE 
 Brief: Utwórz model Event, który będzie zawierał następujące informacje:
