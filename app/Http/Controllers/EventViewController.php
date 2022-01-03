@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Auth;
 
 class EventViewController extends Controller
 {
@@ -39,9 +40,17 @@ class EventViewController extends Controller
         $request->validate([
             'name' => 'required',            
         ]);
-        */
+        */ 
+        $slug = str_replace(' ', '-', $request->input('event_slug'));       
+        $data['event_name'] = $request->input('event_name');
+        $data['start_date'] = $request->input('start_date');
+        $data['end_date'] = $request->input('end_date');
+        $data['event_status'] = $request->input('event_status');
+        $data['event_slug'] = $slug;
+        $data['event_organizer'] = Auth::id();
+        Event::create($data);
      
-        Event::create(request()->all());
+      //  Event::create(request()->all());
 
         return redirect()->route('eventview.index')
             ->with('success', 'Event utworzony.');
@@ -75,7 +84,16 @@ class EventViewController extends Controller
     {
         /*$request->validate([
             'name' => 'required',                        
-        ]);*/     
+        ]);*/  
+
+        $slug = str_replace(' ', '-', $request->input('event_slug'));       
+        $data['event_name'] = $request->input('event_name');
+        $data['start_date'] = $request->input('start_date');
+        $data['end_date'] = $request->input('end_date');
+        $data['event_status'] = $request->input('event_status');
+        $data['event_slug'] = $slug;
+        //$data['event_organizer'] = Auth::id();
+        Event::create($data);   
    
         $eventview->update(request()->all());
 
