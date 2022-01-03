@@ -75,5 +75,5 @@ Zaloguj się, aby mieć dostęp
         </div>
 
     </form>
-@enguest
+@endguest
 @endsection
