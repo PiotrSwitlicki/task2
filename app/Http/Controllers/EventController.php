@@ -10,7 +10,7 @@ class EventController extends Controller
 {
 	public function endpoint()
     {
-	    $events=Event::all();
+	    $events=Event::with('user')->get();
 	    $events=$events->toJson();
 
 	    return view('events', ['events' => $events]);
