@@ -16,8 +16,8 @@ class Eventtable extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('event_name')->nullable();
-            $table->date('start_date')->nullable();
-            $table->date('end_date')->nullable();
+            $table->timestamp('start_date')->nullable();
+            $table->timestamp('end_date')->nullable();
             $table->string('event_status');
             $table->string('event_slug');
             $table->unsignedBigInteger('event_organizer');
