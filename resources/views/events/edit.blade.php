@@ -70,8 +70,6 @@ Zaloguj się, aby mieć dostęp
 
     </form>
 @endguest
-<<<<<<< HEAD
+
 @endsection
-=======
-@endsection
->>>>>>> 742fd1c (update)
+
