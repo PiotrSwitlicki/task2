@@ -62,12 +62,6 @@ Zaloguj się, aby mieć dostęp
                     <input type="text" name="event_slug" class="form-control" placeholder="" value="{{ $eventview->event_slug }}">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Organizator eventu:</strong>
-                    <input type="text" name="event_organizer" class="form-control" placeholder="" value="{{ $eventview->event_organizer }}">
-                </div>
-            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
@@ -76,4 +70,8 @@ Zaloguj się, aby mieć dostęp
 
     </form>
 @endguest
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+>>>>>>> 742fd1c (update)
