@@ -21,5 +21,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/event', [App\Http\Controllers\EventController::class, 'endpoint'])->name('event');
+Route::get('/events', [App\Http\Controllers\EventController::class, 'endpoint'])->name('events');
 Route::resource('eventview', EventViewController::class);
