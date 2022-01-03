@@ -42,7 +42,7 @@ Zaloguj się, aby mieć dostęp
                 <td>{{ $event->end_date }}</td>
                 <td>{{ $event->event_status }}</td>
                 <td>{{ $event->event_slug }}</td>
-                <td>{{ $event->event_organizer }}</td>        
+                <td>{{ $event->user->name }}</td>        
                 <td>
                     <form action="{{ route('eventview.destroy', $event->id) }}" method="POST">
 
