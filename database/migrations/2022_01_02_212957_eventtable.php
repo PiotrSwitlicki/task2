@@ -20,7 +20,8 @@ class Eventtable extends Migration
             $table->date('end_date')->nullable();
             $table->string('event_status');
             $table->string('event_slug');
-            $table->string('event_organizer');
+            $table->unsignedBigInteger('event_organizer');
+            $table->foreign('event_organizer')->references('id')->on('users');  
             $table->rememberToken();
             $table->timestamps();
         });
