@@ -12,7 +12,7 @@ class EventViewController extends Controller
 
 	public function index()
     {
-        $events = Event::latest()->paginate(5);
+        $events = Event::with('user')->latest()->paginate(5);
         
         return view('events.index', compact('events'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -93,9 +93,9 @@ class EventViewController extends Controller
         $data['event_status'] = $request->input('event_status');
         $data['event_slug'] = $slug;
         //$data['event_organizer'] = Auth::id();
-        Event::create($data);   
+        //Event::create($data);   
    
-        $eventview->update(request()->all());
+        $eventview->update($data);
 
         return redirect()->route('eventview.index')
             ->with('success', 'Event updated successfully');
