@@ -42,7 +42,7 @@ class EventViewController extends Controller
         ]);
         */ 
         $slug = str_replace(' ', '-', $request->input('event_name')); 
-        $slug = ucfirst($slug);    
+        $slug = strtolower($slug);    
         $data['event_name'] = $request->input('event_name');
         $data['start_date'] = $request->input('start_date');
         $data['end_date'] = $request->input('end_date');
@@ -88,7 +88,7 @@ class EventViewController extends Controller
         ]);*/  
 
         $slug = str_replace(' ', '-', $request->input('event_name')); 
-        $slug = ucfirst($slug);      
+        $slug = strtolower($slug);      
         $data['event_name'] = $request->input('event_name');
         $data['start_date'] = $request->input('start_date');
         $data['end_date'] = $request->input('end_date');
