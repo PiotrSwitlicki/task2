@@ -41,13 +41,13 @@ Zaloguj się, aby mieć dostęp
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Data rozpoczęcia:</strong>
-                    <input type="text" name="start_date" class="form-control" placeholder="Y-M-D H:M" value="{{ $eventview->start_date }}">
+                    <input type="text" name="start_date" class="form-control" placeholder="Y-M-D H:M:S" value="{{ $eventview->start_date }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Data zakończenia:</strong>
-                    <input type="text" name="end_date" class="form-control" placeholder="Y-M-D H:M" value="{{ $eventview->end_date }}">
+                    <input type="text" name="end_date" class="form-control" placeholder="Y-M-D H:M:S" value="{{ $eventview->end_date }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
